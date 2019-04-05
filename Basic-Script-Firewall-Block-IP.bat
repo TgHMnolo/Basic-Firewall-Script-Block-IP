@@ -23,6 +23,7 @@ echo "09-Block-Ethernalblue-Rule='In' Bound Rule-IP-149.28.85.232"
 echo "10-Block-Ethernalblue-Rule='In' Bound Rule-IP-139.180.139.81"
   netsh advfirewall firewall add rule name="10-Block-Ethernalblue-Rule" interface=any remoteip=139.180.139.81/32 dir=in action=block
 ECHO ON
+TIMEOUT /T 5
 echo "Starting-Block-Firewall-Port-[Out Bound]"
 echo "00-Block-Ethernalblue-Rule='Out' Bound Rule-IP-185.200.116.173"
   netsh advfirewall firewall add rule name="00-Block-Ethernalblue-Rule" interface=any remoteip=185.200.116.173/32 dir=out action=block
@@ -48,3 +49,4 @@ echo "10-Block-Ethernalblue-Rule='Out' Bound Rule-IP-139.180.139.81"
   netsh advfirewall firewall add rule name="10-Block-Ethernalblue-Rule" interface=any remoteip=139.180.139.81/32 dir=out action=block
 
 echo "Add-Rule-On-Firewall-Complete-Please-RECHECK.!!!"
+PAUSE
